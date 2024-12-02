@@ -308,7 +308,7 @@ class InputMask<Opts extends FactoryArg=Record<string, unknown>> {
   }
 
   /** Removes custom event listener */
-  off (ev: string, handler: InputMaskEventListener): this {
+  off (ev: string, handler?: InputMaskEventListener): this {
     if (!this._listeners[ev]) return this;
     if (!handler) {
       delete this._listeners[ev];
